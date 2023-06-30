@@ -1,4 +1,5 @@
 FROM centos:latest
+MAINTAINER chowdarybvsn
 RUN yum install -y httpd\
     zip\
     unzip\
