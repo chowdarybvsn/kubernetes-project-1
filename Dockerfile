@@ -1,5 +1,4 @@
-From centos:latest
-MAINTAINER chowdarybvsn@gmail.com
+FROM centos:latest
 RUN yum install -y httpd\
     zip\
     unzip\
@@ -9,4 +8,4 @@ RUN unzip simply-amazed.zip
 RUN cp -rvf simply-amazed/* .
 RUN rm -rf simply-amazed simply-amazed.zip
 CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
-EXPOSE 80
+EXPOSE 80 22
