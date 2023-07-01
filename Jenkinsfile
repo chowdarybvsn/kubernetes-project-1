@@ -5,7 +5,7 @@ node{
     }
     stage('sending docker file to ansible server') {
         sshagent(['jenkinsssh']) {
-         
+           sendingdockerfile.groovy
         }
     }    
     stage('creating docker image') {
