@@ -1,8 +1,8 @@
 FROM centos:latest
 MAINTAINER chowdarybvsn
-RUN yum install -y httpd\
+RUN yum install -y httpd \
     zip\
-    unzip\
+    unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page292/simply-amazed.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip simply-amazed.zip
