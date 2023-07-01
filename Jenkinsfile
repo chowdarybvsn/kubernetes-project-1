@@ -1,11 +1,11 @@
+@Library( "my_sh_lib") _
 node{
     stage('checkout') {
         git 'https://github.com/chowdarybvsn/kubernetes-project-1.git'
     }
     stage('sending docker file to ansible server') {
         sshagent(['jenkinsssh']) {
-         sh 'ssh -o StrictHostKeyChecking=no ansadmin@10.0.1.45'
-         sh 'scp /var/lib/jenkins/workspace/kubernetes/* ansadmin@10.0.1.45:/home/ansadmin'
+         
         }
     }    
     stage('creating docker image') {
